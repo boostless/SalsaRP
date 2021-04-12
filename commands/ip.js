@@ -5,6 +5,12 @@ module.exports={
     description: 'Serverio ip',
     execute(message, args, bot){
 
+	 if(message.channel.id != '816991922815893614'){
+		  message.delete()
+		message.author.send('*ip komanda gali naudoti tik <#816991922815893614> kanale !')
+		return;
+	 }
+	    
         const welcomeEmbed = new Discord.MessageEmbed()
         .setColor('#cf3838')
 	    .setTitle('Kaip nuvažiuoti į Salsa ?')
