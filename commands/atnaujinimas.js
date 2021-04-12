@@ -4,7 +4,7 @@ module.exports={
     name: 'atnaujinimas',
     description: 'serverio atnaujinimas',
     execute(message, args, bot){
-	if(message.channle.id != '816988698930577409'){
+	if(message.channel.id != '816988698930577409'){
 		message.delete()
 	  return;
 	} 
