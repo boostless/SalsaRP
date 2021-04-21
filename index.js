@@ -21,8 +21,8 @@ client.on('guildMemberAdd', member => {
     const newMemberEmbed = new Discord.MessageEmbed()
     .setColor('#cf3838')
     .setThumbnail(`${member.user.displayAvatarURL()}`)
-    .setDescription(`Sveikas <@${member.id}> atvykęs į Salsa Roleplay discordo serverį!`)
-    .addField('Naujokams', 'Jei esi naujokas patariame paskaityti <#818389974789128233>\n Beto nepamiršk ir persiskaityti <#816989675830902814>');
+    .setDescription(`Welcome <@${member.id}> to Salsa Roleplay discord server!`)
+    .addField('Naujokams', 'For new players we recommend reading <#818389974789128233>\n Also dont forget the rules <#816989675830902814>');
 
     const channel = member.guild.channels.cache.find(ch => ch.id === '817002865037148221');
 
@@ -33,7 +33,7 @@ client.on('guildMemberRemove', member => {
 
     const newMemberEmbed = new Discord.MessageEmbed()
     .setColor('#cf3838')
-    .setDescription(`<@${member.id}> išvažiavo ieškoti geresnio gyvenimo`);
+    .setDescription(`<@${member.id}> we will miss you`);
 
     const channel = member.guild.channels.cache.find(ch => ch.id === '818516885921464371');
 
