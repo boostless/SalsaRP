@@ -22,7 +22,7 @@ client.on('guildMemberAdd', member => {
     .setColor('#cf3838')
     .setThumbnail(`${member.user.displayAvatarURL()}`)
     .setDescription(`Welcome <@${member.id}> to Salsa Roleplay discord server!`)
-    .addField('Naujokams', 'For new players we recommend reading <#818389974789128233>\n Also dont forget the rules <#816989675830902814>');
+    .addField('For newcomers', 'For new players we recommend reading <#818389974789128233>\n Also dont forget the rules <#816989675830902814>');
 
     const channel = member.guild.channels.cache.find(ch => ch.id === '817002865037148221');
 
