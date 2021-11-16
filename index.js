@@ -26,7 +26,7 @@ client.on('guildMemberAdd', member => {
 
     const channel = member.guild.channels.cache.find(ch => ch.id === '910158535344660500');
 
-    channel.send({embeds: [newMemberEmbed]});
+    channel.send(newMemberEmbed);
 });
 
 client.on('guildMemberRemove', member => {
@@ -37,7 +37,7 @@ client.on('guildMemberRemove', member => {
 
     const channel = member.guild.channels.cache.find(ch => ch.id === '910158535344660500');
 
-    channel.send({embeds: [leaveMemberEmbed]});
+    channel.send(leaveMemberEmbed);
 });
 
 // Command handleris nieko daugiau
