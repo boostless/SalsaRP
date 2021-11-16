@@ -32,6 +32,6 @@ module.exports={
         }
 
         //updatechannel.send(updateEmbed)
-        bot.channels.cache.find(channel => channel.name === '📢┇atnaujinimai').send({embeds:[updateEmbed]});
+        bot.channels.cache.find(channel => channel.name === '📢┇atnaujinimai').send(updateEmbed);
     }      
 }
