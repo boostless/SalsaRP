@@ -5,22 +5,22 @@ module.exports={
     description: 'Serverio ip',
     execute(message, args, bot){
 
-	 if(message.channel.id != '816991922815893614'){
+	 if(message.channel.id != '874695047390584872'){
 		  message.delete()
-		message.author.send('`*ip` komanda gali naudoti tik <#816991922815893614> kanale 😊')
+		message.author.send('`*ip` komanda gali naudoti tik <#874695047390584872> kanale 😊')
 		return;
 	 }
 	    
         const welcomeEmbed = new Discord.MessageEmbed()
-        .setColor('#cf3838')
-	    .setTitle('Kaip nuvažiuoti į Salsa ?')
+        .setColor('#3B82F6')
+	    .setTitle('Kaip nuvažiuoti į 3sides ?')
 	    .addFields(
-		    { name: 'Paspauskite F8', value: 'Kai jums pasirodys konsole įveskite `connect cfx.re/join/llg8z7`' },
-            { name: 'Paieškos laukelis', value: 'Paieškos laukelije įveskite SalsaRP' },
+		    { name: 'Paspauskite F8', value: 'Kai jums pasirodys konsole įveskite `NERA`' },
+            { name: 'Paieškos laukelis', value: 'Paieškos laukelije įveskite 3sides' },
 	    );
 	    //.setTimestamp()
 	    //.setFooter(`${message.author}`, 'https://i.imgur.com/wSTFkRM.png');
 
-        message.channel.send(welcomeEmbed)
+        message.channel.send({embeds:[welcomeEmbed]})
     }      
 }
