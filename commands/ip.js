@@ -21,6 +21,6 @@ module.exports={
 	    //.setTimestamp()
 	    //.setFooter(`${message.author}`, 'https://i.imgur.com/wSTFkRM.png');
 
-        message.channel.send({embeds:[welcomeEmbed]})
+        message.channel.send(welcomeEmbed)
     }      
 }
