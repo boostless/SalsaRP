@@ -4,7 +4,7 @@ module.exports={
     name: 'atnaujinimas',
     description: 'serverio atnaujinimas',
     execute(message, args, bot){
-	if(message.channel.id != '816988698930577409'){
+	if(message.channel.id != '874702203087097886'){
 		message.delete()
 	  return;
 	} 
@@ -12,10 +12,10 @@ module.exports={
         var title = ""
         var description = ""
         const updateEmbed = new Discord.MessageEmbed()
-        .setColor('#cf3838')
+        .setColor('#3B82F6')
         .setTimestamp()
         .setFooter(`• Atnaujinima paskelbė ${message.author.username}`)
-	    .setTitle('Salsa Atnaujinimas');
+	    .setTitle('3sides.lt Atnaujinimas');
 
         for(var arg = 0; arg < args.length; ++ arg){
             if(args[arg].includes('^')){
@@ -32,6 +32,6 @@ module.exports={
         }
 
         //updatechannel.send(updateEmbed)
-        bot.channels.cache.find(channel => channel.name === '🆕atnaujinimai').send(updateEmbed);
+        bot.channels.cache.find(channel => channel.name === '📢┇atnaujinimai').send({embeds:[updateEmbed]});
     }      
 }
