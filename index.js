@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client(); 
+const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS", "GUILD_PRESENCES", "GUILD_MESSAGES"] }); 
 const prefix = '*';
 const fs = require('fs');
 
@@ -13,31 +13,31 @@ for(const file of commandFiles){
 }
 
 client.once('ready', () =>{
-    console.log('Salsa prisijungęs!')
+    console.log('3sides prisijungęs!')
 });
 
 client.on('guildMemberAdd', member => {
-
+    console.log(member.id, 'Prisijunge')
     const newMemberEmbed = new Discord.MessageEmbed()
-    .setColor('#cf3838')
+    .setColor('#3B82F6')
     .setThumbnail(`${member.user.displayAvatarURL()}`)
-    .setDescription(`Welcome <@${member.id}> to Salsa Roleplay discord server!`)
-    .addField('For newcomers', 'For new players we recommend reading <#818389974789128233>\n Also dont forget the rules <#816989675830902814>');
+    .setDescription(`Sveikas <@${member.id}> atvykęs į 3sides Roleplay serveri!`)
+    .addField('Naujokams', 'Patariame pasiskaityti <#874696930570162247>\n Taip pat nepamirškite taisyklių <#874696966527926333>');
 
-    const channel = member.guild.channels.cache.find(ch => ch.id === '817002865037148221');
+    const channel = member.guild.channels.cache.find(ch => ch.id === '910158535344660500');
 
-    channel.send(newMemberEmbed);
+    channel.send({embeds: [newMemberEmbed]});
 });
 
 client.on('guildMemberRemove', member => {
+    console.log(member.id, 'Atsijunge')
+    const leaveMemberEmbed = new Discord.MessageEmbed()
+    .setColor('#3B82F6')
+    .setDescription(`<@${member.id}> išėjo ieškoti geresnio gyvenimo`);
 
-    const newMemberEmbed = new Discord.MessageEmbed()
-    .setColor('#cf3838')
-    .setDescription(`<@${member.id}> we will miss you`);
+    const channel = member.guild.channels.cache.find(ch => ch.id === '910158535344660500');
 
-    const channel = member.guild.channels.cache.find(ch => ch.id === '818516885921464371');
-
-    channel.send(newMemberEmbed);
+    channel.send({embeds: [leaveMemberEmbed]});
 });
 
 // Command handleris nieko daugiau
@@ -50,5 +50,6 @@ client.on('message', message => {
         client.commands.get(command).execute(message, args,client)  
     }
 });
+
 
 client.login(process.env.TOKEN);
