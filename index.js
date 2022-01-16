@@ -21,7 +21,7 @@ client.on('guildMemberAdd', member => {
     const newMemberEmbed = new Discord.MessageEmbed()
     .setColor('#3B82F6')
     .setThumbnail(`${member.user.displayAvatarURL()}`)
-    .setDescription(`Sveikas <@${member.id}> atvykęs į 3sides Roleplay serveri!`)
+    .setDescription(`Sveikas <@${member.id}> atvykęs į 3sides GangWars serveri!`)
     .addField('Naujokams', 'Patariame pasiskaityti <#874696930570162247>\n Taip pat nepamirškite taisyklių <#874696966527926333>');
 
     const channel = member.guild.channels.cache.find(ch => ch.id === '910158535344660500');
