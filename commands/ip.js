@@ -5,17 +5,17 @@ module.exports={
     description: 'Serverio ip',
     execute(message, args, bot){
 
-	 if(message.channel.id != '874695047390584872'){
+	 if(message.channel.id != '943578027378503750'){
 		  message.delete()
-		message.author.send('`*ip` komanda gali naudoti tik <#874695047390584872> kanale 😊')
+		message.author.send('`*ip` komanda gali naudoti tik <#943578027378503750> kanale 😊')
 		return;
 	 }
 	    
         const welcomeEmbed = new Discord.MessageEmbed()
         .setColor('#3B82F6')
-	    .setTitle('Kaip nuvažiuoti į 3sides ?')
+	    .setTitle('3sides')
 	    .addFields(
-		    { name: 'Paspauskite F8', value: 'Kai jums pasirodys konsole įveskite `NERA`' },
+		    { name: 'Paspauskite F8', value: 'Kai jums pasirodys konsole įveskite `play.3sides.lt`' },
             { name: 'Paieškos laukelis', value: 'Paieškos laukelije įveskite 3sides' },
 	    );
 	    //.setTimestamp()
