@@ -12,8 +12,7 @@ module.exports={
 	 }
 	    
         const welcomeEmbed = new Discord.MessageEmbed()
-        .setColor('#3B82F6')
-	    .setTitle('3sides')
+        .setColor('#169be6')
 	    .addFields(
 		    { name: 'Paspauskite F8', value: 'Kai jums pasirodys konsole įveskite `play.3sides.lt`' },
             { name: 'Paieškos laukelis', value: 'Paieškos laukelije įveskite 3sides' },
