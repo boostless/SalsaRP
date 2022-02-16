@@ -5,9 +5,9 @@ module.exports={
     description: 'Serverio ip',
     execute(message, args, bot){
 
-	 if(message.channel.id != '943578027378503750'){
+	 if(message.channel.id != '943589963881123892'){
 		  message.delete()
-		message.author.send('`*ip` komanda gali naudoti tik <#943578027378503750> kanale 😊')
+		message.author.send('`*ip` komanda gali naudoti tik <#943589963881123892> kanale 😊')
 		return;
 	 }
 	    
